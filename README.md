@@ -1,4 +1,3 @@
-# gpstracer
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,8 +28,7 @@
     <div id="map"></div>
   </body>
 </html>
-
-<!-- leaflet js  -->
+<!-- leaflet js -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script>
   // Map initialization
@@ -83,14 +81,16 @@
         accuracy
     );
 
-    // Simulated flag (for educational purposes)
-    if (lat > 20 && long < 90) {
-      console.log("Flag 1: {flag1}");
-    }
+    // Calculate flags based on latitude and longitude
+    var flag1 = lat > 20 && long < 90 ? "Flag 1: Value for Flag 1" : lat;
+    var flag2 = lat < 10 && long > 80 ? "Flag 2: Value for Flag 2" : long;
 
-    // Simulated flag (for educational purposes)
-    if (lat < 10 && long > 80) {
-      console.log("Flag 2: {flag2}");
+    // Print flags
+    if (flag1) {
+      console.log(flag1);
+    }
+    if (flag2) {
+      console.log(flag2);
     }
   }
 </script>
